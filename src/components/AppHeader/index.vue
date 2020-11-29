@@ -13,7 +13,7 @@
           >修改密码</el-dropdown-item
         >
         <el-dropdown-item icon="el-icon-circle-close" command="b"
-          >推出</el-dropdown-item
+          >退出</el-dropdown-item
         >
       </el-dropdown-menu>
     </el-dropdown>
@@ -23,7 +23,14 @@
 export default {
   methods: {
     handleCommand(command) {
-      this.$message(`点击了${command}`);
+      switch (command) {
+        case "a":
+          this.$message(`点击了${command}`);
+          break;
+        case "b":
+          this.$message(`点击了${command}`);
+          break;
+      }
     },
   },
 };
